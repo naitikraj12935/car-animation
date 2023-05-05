@@ -1,0 +1,115 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+body{
+    overflow: hidden;
+}
+.sky{
+    height: 50vh;
+    width: 800vw;
+    background-image: url(background.jpg);
+    background-repeat: none;
+    
+  
+    position: absolute;
+    animation: move linear 500s infinite;
+}
+.tree{
+    height: 100vh;
+    width: 800vw;
+    background-image: url(trees.png);
+    
+    position: relative;
+    top: -188px;
+    animation: move linear 20s infinite;
+    
+
+}
+.track{
+    height: 35vh;
+    width: 800vw;
+    background-image: url(track.png);
+    background-repeat: none;
+    position: absolute;
+    top:68vh;
+    animation: roadmove linear 5s infinite;
+}
+.car{
+    height: 70px;
+    width: 320px;
+    background-image:url(car_body.png) ;
+    background-size: cover;
+    position: absolute;
+    top: 65vh;
+    left: 20vw;
+    animation: shake linear .6s infinite;
+}
+ .wheel-left{
+    height: 57px;
+    width: 57px;
+    background-image: url(car_wheel_left.png);
+    background-size: cover;
+    position: absolute;
+    left: 2.8vw;
+    top: 5.4vh;
+    animation: wheelrotaion linear .4s infinite;
+}
+ .wheel-right{
+    height: 50px;
+    width: 50px;
+    background-image: url(car_wheel_left.png);
+    background-size: cover;
+    position: absolute;
+    left: 14.7vw;
+    top: 5.9vh;
+    animation: wheelrotaion linear .2s infinite;
+}
+ @keyframes wheelrotaion{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+ @keyframes roadmove
+{
+    100%{
+        transform:translateX(-500vw);
+    }
+}
+ @keyframes move
+{
+    100%{
+        transform:translateX(-100vw);
+    }
+}
+ @keyframes shake
+{
+    0%{
+        transform:translateY(-3px);
+    }
+    50%
+    {
+        transform:translateY(3px);
+    }
+    100%
+    {
+        transform:translateY(-3px);
+    }
+}
+@media only screen and (max-width: 600px)
+{
+    .wheel-right{
+        left: 40vw;
+        top:4.5vh;
+    }
+    .wheel-left{
+        left:8vw;
+        top:4.5vh ;
+    }
+    
+    .track{
+      height: 60vh;
+      top: 60vh;
+    }
+}
